@@ -1,0 +1,528 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+body{
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+  line-height: 1.7;
+  color: #432;
+  user-select: none;
+  width: 900px;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+/* header------------------------------------------------*/
+
+header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: -2px;
+  position: relative;
+  font-family: 'M PLUS 1p', sans-serif;
+  padding-left: 32px;
+}
+
+.three{
+  position: absolute;
+  top: -31px;
+  left: 174px;
+  font-size: 5.5rem;
+  font-family: 'Grandstander', cursive;
+  font-family: 'Itim', cursive;
+}
+
+.other {
+  font-size: 2rem;
+}
+
+header h1 i {
+  margin-left: 8px;
+  font-size: 2rem;
+  transform: rotate(10deg)
+}
+
+header h1 {
+  position: relative;
+  padding: .8rem;
+  text-align: center;
+}
+
+header h1:before {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 52px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: rgb(255, 0, 0);
+}
+
+/* main------------------------------------------------- */
+main {
+  position: relative;
+  background-image: url(../img/note.jpg);
+}
+
+.box{
+  position: absolute;
+  left: 190px;
+  animation: anim 15s infinite normal;
+  animation-delay: 1s;
+  z-index: 3;
+}
+
+.box i {
+  font-size: 2rem;
+  color: #333;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(0px);
+  }
+
+  4%{
+    transform: translateX(60px);
+  }
+
+  8%{
+    transform: translateX(0px);
+  }
+
+  20%{
+    transform: translateX(0px);
+  }
+
+  24%{
+    transform: translateX(60px);
+  }
+
+  28%{
+    transform: translateX(0px);
+  }
+
+  50%{
+    transform: translateX(0px);
+  }
+
+  54%{
+    transform: translateX(60px);
+  }
+
+  58%{
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+main > img {
+  position: absolute;
+  top: 0;
+  right: 167px;
+  height: 500px;
+}
+main .piano {
+  position: absolute;
+  top: 0;
+  left: 167px;
+  height: 500px;
+}
+
+/* scroll-list------------------------------------------------- */
+ul {
+  list-style: none;
+  border-radius: 12px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.alarm h3 span {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  display: inline-block;
+  width: 61px;
+  height: 50px;
+  text-align: center;
+  background: #fa4141;
+  padding-top: 10px;
+}
+
+.aurola h3  span {
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  display: inline-block;
+  width: 61px;
+  height: 50px;
+  text-align: center;
+  background: #356add;
+  padding-top: 10px;
+}
+
+main h3 span:before,
+main h3 span:after {
+  position: absolute;
+  content: '';
+}
+
+main h3 span:before {
+  top: 0;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #d90606;
+}
+
+.aurola h3 span:before {
+  border-bottom: 10px solid  #356add;
+}
+
+h3 span:after {
+  top: 19px;
+  left: 0;
+  display: block;
+  border: 1.64em solid #fa4141;
+  border-bottom-width: 22px;
+  border-bottom-color: transparent;
+}
+
+.aurola h3 span:after {
+  border: 1.63em solid  #356add;
+  border-bottom-color: transparent;
+}
+
+h3 span i{
+  position: relative;
+  z-index: 1;
+  color: #fff100;
+  font-size: 2rem;
+}
+
+.scroll-list{
+  margin: 0 auto;
+  padding: 0;
+  width: 52%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  padding: .65rem;
+  background-color: rgb(250, 180, 152);
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(121, 121, 121, 0.24);
+  display: inline-block;
+  list-style: none;
+  position: relative;
+}
+
+.item h2 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+.cat h2 {
+  letter-spacing: -2px;
+  font-size: 1.6rem;
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.item audio {
+  margin: 4px auto;
+  background-color: rgba(red, green, blue, alpha);
+}
+
+.item iframe {
+  width: 250px;
+  height: 150px;
+  margin-left: 70px;
+}
+
+.item p {
+  padding: .4rem .65rem;
+  padding-top: 8px;
+  font-family: "ＭＳ 明朝",serif;
+}
+
+.cat p {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: 'M PLUS 1p', sans-serif;
+  letter-spacing: -2px;
+}
+
+.aurola span {
+  letter-spacing: -3px;
+
+}
+
+.alarm {
+  background-color:#ffe5e5;
+}
+
+.cat {
+  background-color: #ffffe5;
+}
+
+.aurola {
+  background-color: #e5f2ff;
+}
+
+.youtube {
+  background-color: #e5ffe5;
+  position: relative;
+}
+
+.youtube p {
+  position: absolute;
+  top: 228px;
+  left: 14px;
+}
+
+main .download {
+  position: absolute;
+  top: 50px;
+  right: 198px;
+  font-size: .875rem;
+  writing-mode: vertical-rl;
+}
+
+/* aside------------------------------------------------- */
+
+aside {
+
+  border-radius: 12px;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+  display: flex;
+  position: relative;
+}
+
+aside h2 {
+  position: absolute;
+  top: 1px;
+  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Turret Road', cursive;
+  color: rgba(4, 0, 253, 0.911);
+  font-size: 1.3rem;
+}
+
+aside img {
+  width: 160px;
+  height: 160px;
+  margin-left: 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+aside .self-introduction {
+  margin-left: 1rem;
+  width: 1090px;
+}
+
+.self-introduction p {
+  padding: 0 .5rem;
+  font-family: "ＭＳ 明朝",serif;
+}
+
+.sns img {
+  width: 100px;
+  height: 40px;
+  margin-top: 6px;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+/* iPad------------------------------------------------- */
+@media screen and (max-width: 959px){
+  header {
+    margin: 2rem 0;
+    padding-left: 19px;
+  }
+
+  .three{
+    top: -33px;
+    left: 183px;
+  }
+
+  aside {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  aside .self-introduction {
+    margin-left: 0;
+    width: 647px;
+  }
+
+  aside h2 {
+    top: -24px;
+    left: 428px;
+  }
+
+  aside h3 {
+    text-align: center;
+    padding: 1.5rem;
+    position: relative;
+  }
+
+  aside h3 span {
+    position: absolute;
+    top: 47px;
+    left: 224px;
+  }
+
+  aside p {
+    margin: 1rem auto;
+    width: 64%;
+  }
+
+  aside .sns {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 412px;
+  }
+
+  .sns img {
+    margin: 0;
+  }
+}
+
+/* スマホサイズ------------------------------------------------- */
+
+@media screen and (max-width: 559px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    padding-left: 37px;
+  }
+
+  .three{
+    top: -40px;
+    left: -6px;
+  }
+
+  .other {
+    position: absolute;
+    top: 66px;
+    right: 32px;
+    font-size: 2rem;
+  }
+
+  header h1:before {
+    display: none;
+  }
+
+/* main------------------------------------------------- */
+
+  main {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  .box{
+    top: -10px;
+    left: 14px;
+  }
+
+  .scroll-list{
+    width: 100%;
+  }
+
+  .cat h2 {
+    font-size: 1.45rem;
+  }
+
+
+  .item p {
+    font-size: 14px;
+    padding: .6rem 1.65rem;
+    padding-top: 10px;
+  }
+
+  .cat p {
+    font-size: 2rem;
+  }
+
+  main .download {
+    top: 50px;
+    right: 26px;
+  }
+
+  main .download {
+    position: static;
+    width: 55%;
+    margin: .3rem auto 1rem;
+    text-align: center;
+    writing-mode: horizontal-tb;
+  }
+
+  /* aside------------------------------------------------- */
+
+  aside {
+    width: 100%;
+    margin: 6rem auto 4rem;
+  }
+
+  aside h2 {
+    left: 44%;
+  }
+
+  aside h3 span {
+    position: absolute;
+    top: 53px;
+    left: 70px;
+  }
+
+  aside p {
+    margin: 1rem auto;
+    width: 86%;
+  }
+
+  aside .self-introduction {
+    width: 100%;
+  }
+
+  aside .sns {
+    margin: 1rem 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
